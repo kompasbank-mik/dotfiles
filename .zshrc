@@ -29,19 +29,6 @@ export SPACESHIP_GIT_SYMBOL=
 export SPACESHIP_DOCKER_SHOW=false
 zplug "denysdovhan/spaceship-prompt", as:theme
 
-# Bundles from: robbyrussell's oh-my-zsh
-zplug "plugins/aws", from:oh-my-zsh
-zplug "plugins/colored-man-pages", from:oh-my-zsh
-zplug "plugins/fzf", from:oh-my-zsh
-zplug "plugins/git", from:oh-my-zsh
-zplug "plugins/gnu-utils", from:oh-my-zsh
-zplug "plugins/jump", from:oh-my-zsh
-zplug "plugins/node", from:oh-my-zsh
-zplug "plugins/npm", from:oh-my-zsh
-# zplug "plugins/docker", from:oh-my-zsh
-# zplug "plugins/python", from:oh-my-zsh
-# zplug "plugins/evalcache", from:oh-my-zsh
-
 # Bundles from: prezto
 # zplug "modules/prompt", from:prezto
 
