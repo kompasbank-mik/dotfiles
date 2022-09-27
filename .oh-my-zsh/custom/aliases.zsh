@@ -1,5 +1,9 @@
 # Basic aliases
+alias ls="ls --color=auto"
 alias ll="ls -alFh"
+alias -g "..."="../.."
+alias -g "...."="../../.."
+alias -g "....."="../../../.."
 
 # Git
 alias gbv="git branch -v -v"
@@ -8,29 +12,25 @@ alias gls='git ls-files'
 alias grollback="git reset --mixed HEAD~1"
 alias gtv='git tag -n | sort -V'
 
-# Git Flow
-alias gflff='git flow feature finish --no-ff'
-alias gflhf='git flow feature finish --no-ff'
-alias gfli='git flow init --default'
+# aws
+alias asl="aws sso login"
 
 # cdk
 alias cdk="npx cdk"
 alias expcdk='export | grep "\(CDK\|AWS\)"'
 
 # Rush
-alias ruf="rush update --full"
-alias rufp="rush update --full --purge"
-alias rub="rush build -t ."
-alias rut="rush test -t ."
+alias rui="rush install"
+alias ruu="rush update"
+alias ruuf="rush update --full"
+alias ruufp="rush update --full --purge"
+alias rub="rush build --verbose"
+alias rubt="rush build -t . --verbose"
+alias rxb="rushx build"
+alias rxw="rushx watch"
+alias rxi="rushx integration"
+alias rxiw="rushx integration --watch"
 
 # kompasbank
 alias ki="./kompas.sh install"
 alias kb="./kompas.sh build"
-alias kt="./kompas.sh test"
-alias ka="./kompas.sh all"
-alias datestamp='date "+%Y%m%d-%H%M%S"'
-alias krs='git flow release start $(date "+%Y%m%d-%H%M%S")'
-alias krf='git flow release finish --no-ff -m "Release"'
-alias khs='git flow hotfix start $(date "+%Y%m%d-%H%M%S")'
-alias khf='git flow hotfix finish --no-ff -m "Release"'
-
