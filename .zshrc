@@ -57,7 +57,7 @@ fi
 export CDK_DEFAULT_ENV=mik
 export CDK_DEFAULT_ACCOUNT=474499803817
 export CDK_DEFAULT_REGION=eu-central-1
-export PYTHONPATH=/workspaces/kompasbank/modules/python-utils/src/python_modules
+export PYTHONPATH=/workspaces/kompasbank/module/python-utils/src/python_modules
 
 # AWS
 export AWS_REGION=eu-central-1          # AWS CLI
