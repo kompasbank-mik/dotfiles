@@ -74,6 +74,3 @@ export PYTHONPATH=/workspaces/kompasbank/module/python-utils/src/python_modules
 export AWS_REGION=eu-central-1          # AWS CLI
 export AWS_DEFAULT_REGION=eu-central-1  # AWS SDK
 export AWS_SDK_LOAD_CONFIG=1
-
-# PYTHON
-export PYTHONPATH=/workspaces/kompasbank/module/python-utils/src/python_modules
