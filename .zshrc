@@ -37,7 +37,7 @@ zplug "plugins/jump", from:oh-my-zsh
 zplug "plugins/node", from:oh-my-zsh
 zplug "plugins/npm", from:oh-my-zsh
 # zplug "plugins/docker", from:oh-my-zsh
-zplug "plugins/python", from:oh-my-zsh
+# zplug "plugins/python", from:oh-my-zsh
 # zplug "plugins/evalcache", from:oh-my-zsh
 
 # Bundles from: prezto
@@ -64,11 +64,21 @@ if [ -e ~/.aliases ]; then
     source ~/.aliases
 fi
 
+awsLogin() {
+    if [ -z "$1" ]; then
+        PROFILE=""
+    else
+        PROFILE="--profile $1"
+    fi
+    AWS_PAGER="" aws sts get-caller-identity $PROFILE || aws sso login $PROFILE
+    eval $(aws configure export-credentials $PROFILE --format env)
+}
+
 # kompasbank
 export CDK_DEFAULT_ENV=mik
 export CDK_DEFAULT_ACCOUNT=474499803817
 export CDK_DEFAULT_REGION=eu-central-1
-export PYTHONPATH=/workspaces/kompasbank/module/python-utils/src/python_modules
+export CDK_DASHBOARD=false
 
 # AWS
 export AWS_REGION=eu-central-1          # AWS CLI
